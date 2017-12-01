@@ -65,7 +65,7 @@ class Login extends Component {
         <button className='loginBtn loginBtn--google' onClick={this.loginWithGoogle}>
           Sign in with Google
         </button>
-        <form onSubmit={this.handleSubmit}>
+        <form onSubmit={this.handleSubmit} noValidate>
           <input type='email' name='email' placeholder='Email' />
           <input type='password' name='password' placeholder='Password' />
           <button type='submit'>Login</button>

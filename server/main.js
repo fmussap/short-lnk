@@ -1,18 +1,7 @@
 import { Meteor } from 'meteor/meteor'
-import { ServiceConfiguration } from 'meteor/service-configuration'
-import { googleClientID, googleClientSecret } from '../imports/config/keys'
+import '../imports/api/google-signin'
+import '../imports/api/users'
+import '../imports/api/links'
 
 Meteor.startup(() => {
-  ServiceConfiguration.configurations.upsert(
-    { service: 'google' },
-    {
-      $set: {
-        loginStyle: 'popup',
-        clientId: googleClientID,
-
-        secret: googleClientSecret
-
-      }
-    }
-  )
 })
