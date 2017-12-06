@@ -44,16 +44,20 @@ class LinksList extends Component {
         <h2>{url}</h2>
         <p className='item__message'>{shortUrl}</p>
         {this.renderStats()}
-        <a className='button button--border button--link' href={shortUrl} target='_blank'>Visit</a>
-        <button className='button button--border' ref='copy' data-clipboard-text={shortUrl}>
-          {this.state.justCopied ? 'Copied' : 'Copy'}
-        </button>
-        <button className='button button--border' onClick={this.onHide}>
-          {this.props.visible ? 'Hide' : 'UnHide'}
-        </button>
-        <button className='button button--border--danger' onClick={this.onDelete}>
-          Delete
-        </button>
+        <div className='item--buttons'>
+          <div>
+            <a className='button button--border button--link' href={shortUrl} target='_blank'>Visit</a>
+            <button className='button button--border' ref='copy' data-clipboard-text={shortUrl}>
+              {this.state.justCopied ? 'Copied' : 'Copy'}
+            </button>
+            <button className='button button--border' onClick={this.onHide}>
+              {this.props.visible ? 'Hide' : 'UnHide'}
+            </button>
+          </div>
+          <button className='button button--border--danger' onClick={this.onDelete}>
+            Delete
+          </button>
+        </div>
       </div>
     )
   }
