@@ -17,7 +17,7 @@ class Signup extends Component {
       const password = e.target.password.value
 
       if (password.length < 8) {
-        return this.setState({ error: 'Password must contain at lest 8 characters long' })
+        return this.setState({ error: 'Password must contain at least 8 characters long' })
       }
 
       Accounts.createUser({ email, password }, (error) => {
