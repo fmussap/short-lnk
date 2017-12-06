@@ -40,6 +40,19 @@
   color: $button-color;
 }
 
+.button--border--danger {
+  background-color: transparent;
+  border: 1px solid $button-danger-hv;
+  color: $button-danger-hv;
+  padding: .3rem .8rem;
+  margin: 0 ($space / 2) 0 0;
+}
+
+.button--border--danger:hover {
+  background-color: $button-danger-hv;
+  color: $button-color;
+}
+
 /* Shared */
 .loginBtn {
   box-sizing: border-box;

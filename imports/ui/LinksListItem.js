@@ -51,7 +51,7 @@ class LinksList extends Component {
         <button className='button button--border' onClick={this.onHide}>
           {this.props.visible ? 'Hide' : 'UnHide'}
         </button>
-        <button className='button button--border' onClick={this.onDelete}>
+        <button className='button button--border--danger' onClick={this.onDelete}>
           Delete
         </button>
       </div>
