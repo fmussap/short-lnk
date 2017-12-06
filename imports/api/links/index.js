@@ -75,5 +75,8 @@ Meteor.methods({
         visitedCount: 1
       }
     })
+  },
+  'links.removeLink' (_id) {
+    Links.remove(_id)
   }
 })

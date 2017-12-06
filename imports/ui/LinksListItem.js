@@ -13,6 +13,9 @@ class LinksList extends Component {
     this.onHide = () => {
       Meteor.call('links.visibility', this.props._id, !this.props.visible)
     }
+    this.onDelete = () => {
+      Meteor.call('links.removeLink', this.props._id)
+    }
   }
 
   renderStats () {
@@ -47,6 +50,9 @@ class LinksList extends Component {
         </button>
         <button className='button button--border' onClick={this.onHide}>
           {this.props.visible ? 'Hide' : 'UnHide'}
+        </button>
+        <button className='button button--border' onClick={this.onDelete}>
+          Delete
         </button>
       </div>
     )
